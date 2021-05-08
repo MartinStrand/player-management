@@ -15,7 +15,7 @@ app.post('/player', addPlayer);
 app.delete('/player/:id', deletePlayer);
 
 /* Start server */
-app.listen(3000, () => console.log('app listening on port 3000.'))
+app.listen(3001, () => console.log('app listening on port 3001.'))
 
 /* The mock 'database' */
 let players = [
@@ -26,13 +26,13 @@ let players = [
 /* IMPLEMENTATION DETAILS */
 
 /* Return a list of all players
- * Example: localhost:3000/players
+ * Example: localhost:3001/players
  */
 function getPlayers(req, res) {
   return res.status(200).json(players).end();
 }
 /* Return a specific player based on id
- * Example: localhost:3000/player/cjeodaus60000poul1g030oia
+ * Example: localhost:3001/player/cjeodaus60000poul1g030oia
  */
 function getPlayer(req, res) {
   const id = req.params.id;
@@ -40,7 +40,7 @@ function getPlayer(req, res) {
   return player ? res.status(200).json(player).end() : res.status(404).end();
 }
 /* Add a new player to the list
- * Example: localhost:3000/player
+ * Example: localhost:3001/player
  * Body: { "name": "Fresh Prince" } */
 function addPlayer(req, res) {
   const name = req.body.name;
@@ -52,7 +52,7 @@ function addPlayer(req, res) {
   return res.status(201).json(newPlayer).end();
 }
 /* Delete a player from the list
- * Example: localhost:3000/player/cjeodaus60000poul1g030oia
+ * Example: localhost:3001/player/cjeodaus60000poul1g030oia
  */
 function deletePlayer(req, res) {
   const id = req.params.id;
@@ -61,7 +61,7 @@ function deletePlayer(req, res) {
   return res.status(200).json(removedPlayer).end();
 }
 /* Edit an existing player in the list
- * Example: localhost:3000/player/cjeodaus60000poul1g030oia
+ * Example: localhost:3001/player/cjeodaus60000poul1g030oia
  * Body: { "name": "Steve Urkle" }
  */
 function putPlayer(req, res) {
