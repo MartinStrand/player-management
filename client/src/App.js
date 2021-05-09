@@ -42,21 +42,20 @@ function App() {
 
     return (
       <div className="App">
-        <h1>Players ({players.length})</h1>
-        {players.map(player =>
-          <Player key={player.id} name={player.name} id={player.id} updatePlayer={updatePlayer} deletePlayer={deletePlayer} />
-        )}
-        <div>
-          <label>
-            Add player:
+        <div className="newPlayer">
+          <p>Add new player:</p>
             <input 
               type="text" 
               value={name} 
               onChange={event => setNewPlayer(event.target.value)}
               />
-          </label>
-          <button onClick={addPlayer}>Add</button>
+          <button onClick={addPlayer}>+</button>
         </div>
+        <hr></hr>
+        <h1>Players ({players.length})</h1>
+        {players.map(player =>
+          <Player key={player.id} name={player.name} id={player.id} updatePlayer={updatePlayer} deletePlayer={deletePlayer} />
+        )}
       </div>
     );
   }
