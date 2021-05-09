@@ -13,7 +13,6 @@ function App() {
     async function fetchPlayers() {
       const response = await fetch('/players')
       const data = await response.json();
-      console.log(data)
       setPlayers(data);
     }
     fetchPlayers();
@@ -43,7 +42,7 @@ function App() {
     return (
       <div className="App">
         <div className="newPlayer">
-          <p>Add new player:</p>
+          <h3>Add new player:</h3>
             <input 
               type="text" 
               value={name} 

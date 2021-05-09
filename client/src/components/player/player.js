@@ -13,6 +13,7 @@ return(
 <div className="container" key={id}> <div className="nameBox">{name} </div><div className="btnBox"><button className="deleteBtn" onClick={() => deletePlayer(id)}>Delete</button></div>
     <div className="updatePlayer">
         <input
+            placeholder="Replace player name"
             type="text" 
             onChange={event => setNewName(event.target.value)}
             />
