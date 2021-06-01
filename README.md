@@ -1,5 +1,5 @@
 
-# G:LOOT front-end assignment
+# front-end assignment
 ## Instructions
 Build a front-end application that communicates with the server provided in this repository. You may use any library/framework/technique/boilerplate that you like and deem suitable for this assignment.
 
